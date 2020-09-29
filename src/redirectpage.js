@@ -7,7 +7,7 @@ const Redirectpage = () => {
     Axios.get(`https://amitappshort.herokuapp.com/${window.location.href.substring(30)}`)
       .then((response) => {
         console.log(response.data.exisiting.url);
-        window.location.href = response.data.exisiting.url;
+        location.href = response.data.exisiting.url;
         setNotFound(false);
       })
       .catch((error) => {
