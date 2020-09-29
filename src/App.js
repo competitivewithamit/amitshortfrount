@@ -7,7 +7,7 @@ export default function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" render={() => <InsertUrl />} />
-        <Route path="/:id" component={} />
+        <Route path="/:id" component={Redirectpage} />
       </Switch>
     </BrowserRouter>
   );
