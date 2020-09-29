@@ -9,6 +9,7 @@ function InsertUrl() {
   const [redirectTo, setRedirectTo] = useState({
     status: false,
     value: "",
+    link:"",
   });
   const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState({
@@ -29,7 +30,7 @@ function InsertUrl() {
     }
     Axios.post("https://amitappshort.herokuapp.com/url", { url, slug })
       .then((response) => {
-        setRedirectTo({ status: true, value: response.data.slug });
+        setRedirectTo({ status: true, value: response.data.slug ,link:response.data.url});
       })
       .catch((error) => {
         setMainError({
@@ -46,7 +47,7 @@ function InsertUrl() {
         {redirectTo.status && (
           <>
             <h3>Your Url is http://localhost:3000/{redirectTo.value}</h3>
-            <a href={redirectTo.value}>Click Here To redirect</a>
+            <a href={redirectTo.link}>Click Here To redirect</a>
           </>
         )}
         {!loading && !redirectTo.status && (
