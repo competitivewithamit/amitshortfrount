@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const Redirectpage = () => {
   const [notFound, setNotFound] = useState(true);
   useEffect(() => {
-    Axios.get(`https://amitappshort.herokuapp.com/${window.location.href.substring(29)}`)
+    Axios.get(`https://amitappshort.herokuapp.com/${window.location.href.substring(30)}`)
       .then((response) => {
         console.log(response.data.exisiting.url);
         window.location.href = response.data.exisiting.url;
