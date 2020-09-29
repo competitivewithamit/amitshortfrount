@@ -27,7 +27,7 @@ function InsertUrl() {
       setLoading(false);
       return;
     }
-    Axios.post("http://localhost:8080/url", { url, slug })
+    Axios.post("https://amitappshort.herokuapp.com/url", { url, slug })
       .then((response) => {
         setRedirectTo({ status: true, value: response.data.slug });
       })
