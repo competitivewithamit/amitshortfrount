@@ -46,7 +46,7 @@ function InsertUrl() {
         {loading && <h1>Loading</h1>}
         {redirectTo.status && (
           <>
-            <h3>Your Url is http://localhost:3000/{redirectTo.value}</h3>
+            <h3>Your Url is https://affectionate-cray-ee0da7.netlify.app/{redirectTo.value}</h3>
             <a href={redirectTo.link}>Click Here To redirect</a>
           </>
         )}
